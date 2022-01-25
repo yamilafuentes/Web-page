@@ -50,10 +50,15 @@ console.log(element)
 
 const stringVacio = ""
 
-console.log(photos)
+/* console.log(photos) */
 
-for (let photo in photos) {
-  Object.keys(photo)
+for (let i = 0; i < photos.length; i++) {
+  const keys = Object.keys(photos[i])
+
+  for (let k = 0; k < keys.length; k++) {
+    const value = photos[i][keys[k]]
+    console.log(`${keys[k]}: ${value}`)
+  }
 
 } 
 
